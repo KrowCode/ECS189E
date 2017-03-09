@@ -22,10 +22,12 @@ public interface IStudent {
      * @param className Name of the class to drop
      * @param year Year in which class is taught
      */
+
     void dropClass(String studentName, String className, int year);
 
     /**
-     * Submit {@code studentName}'s homework solution {@code answerString} for homework {@code homeworkName} of class {@code className},
+     * Submit {@code studentName}'s homework solution {@code answerString} for
+     * homework {@code homeworkName} of class {@code className},
      * provided homework exists, student is registered and the class is taught in the current year
      *
      * @param studentName Name of the student
@@ -44,7 +46,8 @@ public interface IStudent {
     boolean isRegisteredFor(String studentName, String className, int year);
 
     /**
-     * @return Whether student {@code studentName} has submitted homework {@code homeworkName} for this class
+     * @return Whether student {@code studentName} has submitted homework
+     * {@code homeworkName} for this class
      */
     boolean hasSubmitted(String studentName, String homeworkName, String className, int year);
 }

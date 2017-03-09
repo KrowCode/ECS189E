@@ -6,8 +6,10 @@ package api;
 public interface IAdmin {
 
     /**
-     * Create class {@code className} with capacity {@code capacity} and assign instructor {@code instructorName}
-     * The className/year pair must be unique and no instructor can be assigned to more than two courses in a year.
+     * Create class {@code className} with capacity {@code capacity} and assign
+     * instructor {@code instructorName}
+     * The className/year pair must be unique and no instructor can be assigned
+     * to more than two courses in a year.
      *
      * @param className Name of the class to be created
      * @param year Calendar year in which the course is to be taught, cannot be in the past
@@ -17,14 +19,15 @@ public interface IAdmin {
     void createClass(String className, int year, String instructorName, int capacity);
 
     /**
-     * Adjust the capacity (maximum number of students) of class {@code className} to new capacity {@code capacity}
+     * Adjust the capacity (maximum number of students) of class {@code className}
+     * to new capacity {@code capacity}
      *
      * @param className Name of the class for which capacity should be changed
      * @param year Year in which this class is taught
-     * @param capacity New capacity of this class, must be at least equal to the number of students enrolled
+     * @param capacity New capacity of this class, must be at least equal to the
+     *                 number of students enrolled
      */
     void changeCapacity(String className, int year, int capacity);
-
 
     // Getters for testing purposes
     /**
@@ -38,7 +41,8 @@ public interface IAdmin {
     String getClassInstructor(String className, int year);
 
     /**
-     * @return The capacity (maximum number of enrollees) for class {@code className} in year {@code year}
+     * @return The capacity (maximum number of enrollees) for class {@code className}
+     * in year {@code year}
      */
     int getClassCapacity(String className, int year);
 }
