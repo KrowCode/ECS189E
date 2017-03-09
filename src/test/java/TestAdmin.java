@@ -174,7 +174,15 @@ public class TestAdmin {
     }
 
 
+    //Changing for a class that doesn't exist
+    @Test
+    public void testChangeNotExist()
+    {
+        this.admin.createClass("Test", 2017, "Instructor", 10);
+        this.admin.changeCapacity("Test2", 2017, 9);
+        assertTrue(this.admin.getClassCapacity("Test", 2017) == 10);
 
+    }
 
 
 
